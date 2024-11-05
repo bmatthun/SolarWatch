@@ -31,6 +31,8 @@ export default function LoginForm() {
         e.preventDefault()
         const res = await fetchSignIn(username, password);
 
+        console.log(localStorage);
+        
         if (localStorage.jwt && localStorage.roles.includes('ADMIN')) {
           navigate("/admin")
         } else if (localStorage.jwt) {

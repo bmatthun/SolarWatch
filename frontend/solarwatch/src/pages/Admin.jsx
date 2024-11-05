@@ -28,7 +28,7 @@ export default function Admin() {
     function onSubmit(e) {
         e.preventDefault();
         fetchSunsetSunrise(city, date); 
-        console.log(localStorage.getItem('jwt'));
+        console.log(localStorage);
         
     }
 

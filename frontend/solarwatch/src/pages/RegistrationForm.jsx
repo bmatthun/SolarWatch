@@ -25,7 +25,7 @@ export default function RegistrationForm() {
     function onSubmit(e) {
         e.preventDefault();
         fetchRegData(username, password);
-        navigate("/signin");
+        navigate("/");
     }
 
     return  (

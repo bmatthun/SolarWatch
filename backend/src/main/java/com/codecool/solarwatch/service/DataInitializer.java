@@ -23,9 +23,10 @@ public class DataInitializer {
 
     @PostConstruct
     public void initData() {
+        System.out.println("before");
         if (userRepository.findUserByUsername("admin").isEmpty()) {
             UserEntity admin = new UserEntity("admin", passwordEncoder.encode("admin"), List.of(Role.ROLE_USER, Role.ROLE_ADMIN));
-            
+
             userRepository.save(admin);
             System.out.println("Admin added");
         }
