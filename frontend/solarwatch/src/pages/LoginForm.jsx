@@ -6,7 +6,7 @@ export default function LoginForm() {
     const [password, setPassword] = useState("");
     const navigate = useNavigate();
 
-    async function fetchRegData(username, password) {
+    async function fetchSignIn(username, password) {
         const res = await fetch('api/logger/signin', {
             method: 'POST',
             headers: {
@@ -23,12 +23,22 @@ export default function LoginForm() {
           localStorage.setItem('jwt', resData.jwt)
           localStorage.setItem('roles', resData.roles)
          }
+
+         return resData;
     }
 
     async function onSubmit(e) {
         e.preventDefault()
-        await fetchRegData(username, password);
-        navigate("/search")
+        const res = await fetchSignIn(username, password);
+
+        if (localStorage.jwt && localStorage.roles.includes('ADMIN')) {
+          navigate("/admin")
+        } else if (localStorage.jwt) {
+          navigate("/search")  
+        }
+        else {
+          console.error(`Error: ${res}`)
+        }
     }
 
     
