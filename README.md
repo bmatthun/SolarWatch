@@ -21,7 +21,7 @@ This project is a comprehensive full-stack application that provides sunset and 
 ## Prerequisites
 
 - [Docker](https://www.docker.com/) and [Docker Compose](https://docs.docker.com/compose/) must be installed on your machine.
-- [Node.js](https://nodejs.org/) is required if you wish to manage frontend dependencies separately.
+- [Node.js](https://nodejs.org/) is required as a dependency for using frontend-side features.
 
 ## Installation
 
@@ -59,7 +59,3 @@ While Docker Compose manages most commands for the multi-container setup, here a
 - **Rebuild images**: `docker-compose up --build`
 - **View logs**: `docker-compose logs`
 - **Stop containers**: `docker-compose down`
-- **Restart specific service** (e.g., frontend): 
-    ```bash
-    docker-compose up -d --no-deps --build frontend
-    ```
