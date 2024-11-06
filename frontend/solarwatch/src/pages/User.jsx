@@ -38,6 +38,7 @@ export default function User() {
             <form className="SunsetSunrise" onSubmit={onSubmit}>
                 <Input
                     label="City"
+                    type="text"
                     value={city}
                     onChange={(e) => setCity(e.target.value)}
                     id="city"

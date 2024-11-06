@@ -25,29 +25,37 @@ body {
 
 .navbar {
   display: flex;
+  background-image: url('../src/assets/logo_background.png');
+  background-size: 250px 180px;
+  background-position: center;
+  background-repeat: no-repeat;
   align-items: center;
   justify-content: space-between;
   color: #fff;
   background-color: #242424;
   border-radius: 12px;
   padding: 1em;
-  margin-top: 300px; /* A navbarot lejjebb helyezi */
+  margin-top: 250px; /* A navbarot lejjebb helyezi */
 }
 
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  font-size: 3.0em;
+  color: #213547;
   text-align: center;
-  background-color: #242424;
-  border: dashed;
+  background-image: url('../src/assets/logo_background.png');
+  background-size: 250px 180px;
+  background-position: center;
+  background-repeat: no-repeat;
   padding: 0.3em;
-  border-radius: 12px;
   position: absolute;
   top: 0px; /* A h1-t feljebb helyezzük, hogy közelebb legyen a tetejéhez */
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%) translateY(-10%);
   width: 250px;
+  height: 130px;
+  line-height: 60px; /* A szöveg középre igazítása a háttérképhez */
 }
+
 
 button {
   border-radius: 8px;
