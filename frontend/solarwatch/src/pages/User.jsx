@@ -1,17 +1,20 @@
 import { useEffect, useState } from "react";
-import Input from "../components/Input";
 import Table from "../components/Table";
+import Input from "../components/Input";
 
-export default function Admin() {
-    const [date, setDate] = useState('');
+export default function User() {
+    const rawDate = new Date().toISOString();
+    const localDate = rawDate.substring(0, rawDate.indexOf('T'));
+    
+    const [date, setDate] = useState(localDate);
     const [city, setCity] = useState('');
     const [sunset, setSunset] = useState(null);
     const [sunrise, setSunrise] = useState(null);
 
     async function fetchSunsetSunrise(city, date) {
         try {
-            const res = await fetch(`/api/admin/add?city=${city.toUpperCase()}&date=${date}`, {
-                method: 'POST',
+            const res = await fetch(`/api/user/solarwatch?city=${city.toUpperCase()}&date=${date}`, {
+                method: 'GET',
                 headers: {
                     'Authorization': `Bearer ${localStorage.getItem('jwt')}`,
                     'Content-Type': 'application/json'

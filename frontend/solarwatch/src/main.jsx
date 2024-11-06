@@ -5,8 +5,8 @@ import RegistrationForm from './pages/RegistrationForm.jsx'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Layout from './pages/Layout/Layout.jsx'; 
 import LoginForm from './pages/LoginForm.jsx';
-import SunsetSunrise from './pages/SolarReport.jsx';
-import SolarReport from './pages/SolarReport.jsx';
+import SunsetSunrise from './pages/User.jsx';
+import SolarReport from './pages/User.jsx';
 import Admin from './pages/Admin.jsx';
 
 

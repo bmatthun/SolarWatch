@@ -17,7 +17,7 @@ export default function NavBar() {
     
   return (
     <nav className="navbar">
-      <h2 className="navbar-logo">Solar Watch</h2>
+      {/* {<h2 className="navbar-logo">Solar Watch</h2>} */}
       <ul className="navbar-links">
         <li> 
         {isUser && <Link to="/admin">Search Solar Report</Link>}
