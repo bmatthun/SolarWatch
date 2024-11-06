@@ -21,7 +21,6 @@ This project is a comprehensive full-stack application that provides sunset and 
 ## Prerequisites
 
 - [Docker](https://www.docker.com/) and [Docker Compose](https://docs.docker.com/compose/) must be installed on your machine.
-- [Node.js](https://nodejs.org/) is required as a dependency for using frontend-side features.
 
 ## Installation
 
