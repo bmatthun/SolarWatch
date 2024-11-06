@@ -15,9 +15,13 @@ export default function RegistrationForm() {
       },
       body: JSON.stringify({ username, password })
     });
-    const resData = await res.json();
-    console.log(resData);
-    return resData;
+
+    if (!res.ok) {
+      const errorText = await res.text();
+      console.error("Error:", errorText);
+      throw new Error("Failed to register: " + errorText);
+    }
+
   }
 
   async function onSubmit(e) {

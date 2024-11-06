@@ -22,8 +22,8 @@ body {
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 100%; /* Biztosítjuk, hogy a body kitöltse a teljes képernyőt */
-  background-image: url('./assets/background.webp');
+  height: 100%;
+  background-image: url('./assets/background.png');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -35,7 +35,7 @@ body {
   flex: 1; 
   flex-direction: column;
   width: 100%;
-  height: 100%; /* Kitölti a body teljes magasságát és szélességét */
+  height: 100%;
   align-items: center; 
   justify-content: center;
 }

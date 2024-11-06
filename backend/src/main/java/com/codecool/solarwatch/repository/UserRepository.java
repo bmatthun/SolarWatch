@@ -18,4 +18,6 @@ public interface UserRepository extends JpaRepository<UserEntity, Long> {
     Optional<UserEntity> findUserByUsername(String username);
 
     int countUserByUsername(String username);
+
+    boolean existsByUsername(String username);
 }

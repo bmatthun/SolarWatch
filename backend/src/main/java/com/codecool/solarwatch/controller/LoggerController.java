@@ -39,11 +39,16 @@ public class LoggerController {
     }
 
     @PostMapping("/register")
-    public ResponseEntity<Void> createUser(@RequestBody UserRequest signUpRequest) {
+    public ResponseEntity<?> createUser(@RequestBody UserRequest signUpRequest) {
+        if (userRepository.existsByUsername(signUpRequest.getUsername())) {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST)
+                    .body("Username is already taken");
+        }
         UserEntity user = new UserEntity(signUpRequest.getUsername(), passwordEncoder.encode(signUpRequest.getPassword()), List.of(Role.ROLE_USER));
         userRepository.save(user);
         return ResponseEntity.status(HttpStatus.CREATED).build();
     }
+
 
     @PostMapping("/signin")
     public ResponseEntity<?> authenticateUser(@RequestBody UserRequest loginRequest) {
