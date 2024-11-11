@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Form from "../components/Form";
+import "./LoginForm.css";
 
 export default function LoginForm() {
   const [username, setUsername] = useState("");

@@ -4,7 +4,7 @@ services:
   app:
     image: 'docker-spring-boot-postgres:latest'
     build:
-      context: ./backend  # Path to backend Dockerfile
+      context: ./backend 
       dockerfile: Dockerfile
     container_name: spring-boot-app
     ports:
@@ -31,13 +31,12 @@ services:
 
   frontend:
     build:
-      context: ./frontend   # Path to client folder containing the solarwatch folder
+      context: ./frontend 
       dockerfile: Dockerfile
     container_name: solarwatch-frontend
     ports:
       - "5173:5173"
     environment:
-    # process.env-vel beállítani környezeti változót a proxy-hoz; először beállítani, utána kiolvasni; backen
       BACKEND_URL: spring-boot-app
     depends_on:
       - app

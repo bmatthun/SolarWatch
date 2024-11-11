@@ -25,12 +25,10 @@ body {
 
 .navbar {
   display: flex;
-  background-image: url('../src/assets/logo_background.png');
   background-size: 250px 180px;
   background-position: center;
   background-repeat: no-repeat;
   align-items: center;
-  justify-content: space-between;
   color: #fff;
   background-color: #242424;
   border-radius: 12px;

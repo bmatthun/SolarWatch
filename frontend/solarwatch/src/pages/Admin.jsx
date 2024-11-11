@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Input from "../components/Input";
 import Table from "../components/Table";
+import { TailSpin } from "react-loader-spinner";
 
 export default function Admin() {
     const [date, setDate] = useState('');
@@ -11,6 +12,7 @@ export default function Admin() {
 
     async function fetchSunsetSunrise(city, date) {
         try {
+            setLoading(true);
             const res = await fetch(`/api/admin/add?city=${city.toUpperCase()}&date=${date}`, {
                 method: 'POST',
                 headers: {

@@ -19,12 +19,16 @@ export default function NavBar() {
     <nav className="navbar">
       {/* {<h2 className="navbar-logo">Solar Watch</h2>} */}
       <ul className="navbar-links">
-        <li> 
-        {isUser && <Link to="/admin">Search Solar Report</Link>}
-        </li>
-        <li>
-            {isAdmin && <Link to="/admin">Create Solar Report</Link>}
-        </li>
+         
+        {isUser && (
+          <li>
+            <Link to="/admin">Search Solar Report</Link>
+            </li>)}
+        
+            {isAdmin && (
+              <li>
+                <Link to="/admin">Create Solar Report</Link>
+                </li>)}
         <li> {isLoggedIn ? 
                 <button onClick={handleSignOut}>Sign out</button>
                 :
