@@ -37,7 +37,8 @@ services:
     ports:
       - "5173:5173"
     environment:
-      VITE_API_URL: http://localhost:8080/api
+    # process.env-vel beállítani környezeti változót a proxy-hoz; először beállítani, utána kiolvasni; backen
+      BACKEND_URL: spring-boot-app
     depends_on:
       - app
 

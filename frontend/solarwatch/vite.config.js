@@ -7,7 +7,7 @@ export default defineConfig({
   server: {
     host: true,
     proxy: {
-      "/api": "http://spring-boot-app:8080/"
+      "/api": `http://${process.env.BACKEND_URL ?? 'localhost'}:8080/`
     } 
   }
 })

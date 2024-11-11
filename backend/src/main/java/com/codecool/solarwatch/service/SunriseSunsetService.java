@@ -97,8 +97,8 @@ public class SunriseSunsetService {
             String country = getGeocoding(cityName).country();
 
             //saving the data in the DB
-            cityRepository.save(new City(cityName, lat, lon, country));
-            return new City(cityName, lat, lon, country);
+            City city = cityRepository.save(new City(cityName, lat, lon, country));
+            return city;
         }
     }
 

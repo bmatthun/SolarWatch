@@ -7,6 +7,7 @@ export default function Admin() {
     const [city, setCity] = useState('');
     const [sunset, setSunset] = useState(null);
     const [sunrise, setSunrise] = useState(null);
+    const [loading, setLoading] = useState(false);
 
     async function fetchSunsetSunrise(city, date) {
         try {
@@ -22,6 +23,8 @@ export default function Admin() {
             setSunrise(resData.sunrise);  
         } catch (error) {
             console.error(error);
+        } finally {
+            setLoading(false)
         }
     }
 
@@ -49,7 +52,11 @@ export default function Admin() {
                 />
                 <button type="submit">Submit</button>
             </form>
-            {sunset && sunrise && <Table sunset={sunset} sunrise={sunrise} />}
+            {loading ? (
+                <div className="loading">
+                    <TailSpin color="red" radius={"8px"} />
+                </div> ) : (
+                    sunset && sunrise && <Table sunset={sunset} sunrise={sunrise} />)}
         </div>
     );
 }

@@ -19,7 +19,7 @@ export default function Table({ sunset, sunrise}) {
                         <img 
                             src={sunriseImage} 
                             alt="Sunrise" 
-                            className="sunset-sunrise-image"
+                            //className="sunset-sunrise-image"
                             style={{ width: '100px', height: 'auto' }} />
                     </td>
                     <td>{sunrise}</td>
@@ -30,7 +30,7 @@ export default function Table({ sunset, sunrise}) {
                         <img 
                             src={sunsetImage}
                             alt="Sunset" 
-                            className="sunset-sunrise-image"
+                            //className="sunset-sunrise-image"
                             style={{ width: '100px', height: 'auto' }} />
                     </td>
                     <td>{sunset}</td>
