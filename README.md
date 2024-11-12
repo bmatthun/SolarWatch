@@ -50,6 +50,7 @@ This project is a comprehensive full-stack application that provides sunset and 
     ```bash
     docker-compose down
     ```
+**Admin Access**: Certain features require administrator access, which you can obtain by logging in with the username `admin` and password `admin`.
 
 ## Docker Commands
 
